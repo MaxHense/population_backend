@@ -38,7 +38,7 @@ Running several replicas? Run `alembic upgrade head` once as a separate job inst
 
 ## Releases
 
-Push a tag `v*` on `main` (e.g. `git tag v1.0.0 && git push origin v1.0.0`).
+Publish a GitHub release on `main` with a new tag `v*` (Releases → Draft a new release).
 `.github/workflows/release.yml` builds the image, runs it against a fresh PostGIS
 (migrations + one query) and only then pushes `ghcr.io/<owner>/population_backend:<tag>`
 with a provenance attestation. The digest is in the workflow summary; deploy by digest, not by tag.
