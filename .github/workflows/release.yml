@@ -1,11 +1,11 @@
 name: Release image
 
-# A tag v* builds the image, smoke tests it against PostGIS and only then
-# publishes it to ghcr.io with a provenance attestation.
+# Publishing a GitHub release (tag v*, made in the UI) builds the image, smoke tests it
+# against PostGIS and only then publishes it to ghcr.io with a provenance attestation.
 # Deployments pin the printed digest, never the tag.
 on:
-  push:
-    tags: ["v*"]
+  release:
+    types: [published]
 
 permissions:
   contents: read
