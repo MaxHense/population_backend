@@ -1,5 +1,5 @@
 # Runtime dependencies (direct only). After editing, regenerate the lock file, see README "Dependencies".
-fastapi==0.163.1
+fastapi==0.165.0
 uvicorn==0.54.0
 sqlmodel==0.0.50
 alembic==1.20.1
